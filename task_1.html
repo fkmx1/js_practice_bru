@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 задача</title>
+</head>
+<body>
+	
+	<script>
+
+	let number = prompt('Введите пятизначное число: ', 12345);
+
+
+	let last_number = number % 10;
+	last_number = String(last_number);
+	console.log(last_number);
+
+	number -= last_number;
+	console.log(number);
+	number /= 10;
+	console.log(number);
+	let new_number = last_number + number;
+	console.log(new_number);
+	alert('Новое число:' + new_number);
+
+
+	</script>
+	
+</body>
+</html>
