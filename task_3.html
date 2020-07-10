@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let check_year;
+      let check = 0;
+      let date = prompt("Введите дату");
+      if (date < 1 || date > 31) {
+        alert("Введите правильную дату");
+      }
+      let month = prompt("Введите номер месяца");
+      if (month < 1 || month > 12) {
+        alert("Введите правильный номер месяца");
+      }
+      let year = prompt("Введите год");
+      if (year < 1000 || year > 9999) {
+        alert("Введите правильный 4-х значный год");
+      }
+
+      if (month == 1 && 3 && 5 && 7 && 8 && 10 && 12) {
+        if (date < 31) {
+          date++;
+          check++;
+        } else {
+          date = 1;
+          if ((month = 12)) {
+            month = 1;
+            year++;
+            check++;
+          } else {
+            month++;
+            check++;
+          }
+        }
+      } else if (month == 4 && 6 && 9 && 11) {
+        if (date < 30) {
+          date++;
+          check++;
+        } else if (date == 31) {
+          alert("Введите правильную дату для " + month + " месяца");
+        } else {
+          date = 1;
+          month++;
+          check++;
+        }
+      } else {
+        if ((check_year = year % 4 != 0) && date > 28) {
+          if (date < 28) {
+            date++;
+            check++;
+          } else if (date == 28) {
+            date = 1;
+            month++;
+            check++;
+          } else {
+            alert(
+              "Данный год не является високосным, введите дату для февраля от 1 до 29"
+            );
+          }
+        } else {
+          if (date < 29) {
+            date++;
+            check++;
+          } else if (date == 29) {
+            date = 1;
+            month++;
+            check++;
+          } else {
+            alert("Введите правильную дату от 1 до 30 для високосного года");
+          }
+        }
+      }
+
+      if (check == 1) {
+        alert("Следующая дата: " + date + "/" + month + "/" + year);
+      }
+    </script>
+  </body>
+</html>
