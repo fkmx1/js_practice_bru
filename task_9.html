@@ -12,13 +12,13 @@
     alert("Загадайте число от 0 до 100");
     let left = 0;
     let right = 100;
-    let ans = "";
+    let number = "";
     let mid = Math.floor( (right + left) / 2);
 
     do{
-        ans = prompt(`Ваше число > ${mid}, < ${mid} или == ${mid}`);
+        number = prompt(`Ваше число > ${mid}, < ${mid} или = ${mid}`);
 
-        if(ans == ">"){
+        if(number == ">"){
             left = mid;
         }
         else if(ans == "<"){
@@ -26,7 +26,7 @@
         }
 
         mid = Math.floor( (right + left) / 2);
-    }while(ans != "==")
+    }while(number != "=")
 
     </script>
     
