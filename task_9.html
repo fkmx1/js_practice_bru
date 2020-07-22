@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_9</title>
+</head>
+<body>
+
+    <script>
+
+    alert("Загадайте число от 0 до 100");
+    let left = 0;
+    let right = 100;
+    let ans = "";
+    let mid = Math.floor( (right + left) / 2);
+
+    do{
+        ans = prompt(`Ваше число > ${mid}, < ${mid} или == ${mid}`);
+
+        if(ans == ">"){
+            left = mid;
+        }
+        else if(ans == "<"){
+            right = mid;
+        }
+
+        mid = Math.floor( (right + left) / 2);
+    }while(ans != "==")
+
+    </script>
+    
+</body>
+</html>
