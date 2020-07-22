@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_10</title>
+</head>
+<body>
+    <script>
+
+    let scores = 0;
+    let q;
+
+    q = prompt("Кто из президентов США написал свой собственный рассказ про Шерлока Холмса?\na)Джон Кеннеди\nb)Франклин Рузвельт\nc)Рональд Рейган");
+
+    if(q == "b") scores += 2;
+
+    q = prompt("Откуда пошло выражение «деньги не пахнут?\na)От подателей за провоз парфюмерии\nb)От сборов за нестиранные носки" +
+        "\nc)От налога на туалеты");
+
+    if(q == "c") scores += 2;
+
+    q = prompt("Российский мультфильм, удостоенный «Оскара», — это…\na)Винни-Пух\nb)Старик и море\nc)Ну, погоди!");
+
+    if(q == "b") scores += 2;
+
+    alert(`У вас ${scores} баллов\n`)
+
+    </script>
+</body>
+</html>
