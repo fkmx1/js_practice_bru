@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_7</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+        var strLen = str.length,
+        strReverse = str.split('').reverse().join(''); //Разбиваем строку посимвольно  и превращаем ее в массив с помощью split(''), потом применяем к нему метод reverse() и собираем все символы в строку с помощью join('')
+        if (strReverse == str) {
+        return 'yes';
+        } else {
+        return 'no';
+        }
+         }
+
+         /*
+        test = isPalindrome('abcdedcba');
+        test2 = isPalindrome('abcded');
+
+        console.log(test2);
+        document.write('isPalindrome result: ' + 'str - ' + test + ' str2 - ' + test2);
+        */
+
+        let word = prompt("Введите слово для проверки на палиндром:");
+
+        let check = isPalindrome (word);
+        alert("Веденное слово палиндром? " + check);
+
+    </script>
+</body>
+</html>
