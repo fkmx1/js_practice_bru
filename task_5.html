@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_5</title>
+</head>
+<body>
+    <script>
+        let numArray = new Array();
+        let n = prompt ("Сколько чисел будете вводить? От 1 до 5");
+        for (let i=1; i<=n; i++){
+            numArray.push(prompt("Введите " + i + " число"));
+        }
+
+        let max = Math.max.apply(null, numArray)
+
+        alert("Максимальное число: " + max);
+
+    </script>
+</body>
+</html>
